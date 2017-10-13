@@ -23,7 +23,7 @@ public class ListeServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setAttribute("listes", listeBean.getAllListes());
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/jsp/liste.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/jsp/listes.jsp");
 		dispatcher.forward(request, response);
 	}
 

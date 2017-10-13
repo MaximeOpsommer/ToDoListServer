@@ -23,4 +23,11 @@
             <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
         </properties>
     </persistence-unit>
+    <persistence-unit name="item-pu" transaction-type="JTA">
+        <jta-data-source>item</jta-data-source>
+        <class>car.tp4.entity.Item</class>
+        <properties>
+            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+        </properties>
+    </persistence-unit>
 </persistence>

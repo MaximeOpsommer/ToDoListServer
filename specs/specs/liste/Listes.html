@@ -1,0 +1,25 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+
+<head>
+
+<link href="../../concordion.css" rel="stylesheet" type="text/css" />
+
+<title>Listes</title>
+
+</head>
+
+<body>
+
+<h1>Construction d'une liste</h1>
+
+<p>
+	Construit une Liste a partir de la valeur remplie precedemment.
+	Par exemple, si on rentre la valeur 
+	<span concordion:set="#intitule">Liste de courses</span>, on 
+	<span concordion:execute="#result = getTestBuildListe(#intitule)">envoie</span> en base de donnees l'objet Liste ayant comme intitule
+	<span concordion:assert-equals="#result.intitule">Liste de courses</span>
+</p>
+
+</body>
+
+</html>

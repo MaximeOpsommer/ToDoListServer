@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Liste {
+public class Item {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,7 +14,11 @@ public class Liste {
 	
 	private String intitule;
 	
-	public Liste() {
+	private int idListe;
+	
+	private boolean realisee;
+	
+	public Item() {
 		
 	}
 	
@@ -25,13 +29,31 @@ public class Liste {
 	public void setId(long id) {
 		this.id = id;
 	}
-	
+
 	public String getIntitule() {
-		return this.intitule;
+		return intitule;
 	}
-	
+
 	public void setIntitule(String intitule) {
 		this.intitule = intitule;
 	}
+	
+	public int getIdListe() {
+		return idListe;
+	}
+
+	public void setIdListe(int idListe) {
+		this.idListe = idListe;
+	}
+
+	public boolean isRealisee() {
+		return realisee;
+	}
+
+	public void setRealisee(boolean realisee) {
+		this.realisee = realisee;
+	}
+
+	
 
 }
