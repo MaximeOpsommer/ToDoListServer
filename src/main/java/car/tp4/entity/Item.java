@@ -12,9 +12,9 @@ public class Item {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	private String intitule;
-	
 	private int idListe;
+	
+	private String intitule;
 	
 	private boolean realisee;
 	
@@ -30,20 +30,20 @@ public class Item {
 		this.id = id;
 	}
 
-	public String getIntitule() {
-		return intitule;
-	}
-
-	public void setIntitule(String intitule) {
-		this.intitule = intitule;
-	}
-	
 	public int getIdListe() {
 		return idListe;
 	}
-
+	
 	public void setIdListe(int idListe) {
 		this.idListe = idListe;
+	}
+	
+	public String getIntitule() {
+		return intitule;
+	}
+	
+	public void setIntitule(String intitule) {
+		this.intitule = intitule;
 	}
 
 	public boolean isRealisee() {

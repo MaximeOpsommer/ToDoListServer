@@ -1,10 +1,7 @@
 package car.tp4.bean;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,13 +20,17 @@ public class ListeBean {
 	private EntityManager entityManager;
 	
 	public List<Liste> getAllListes() {
-		
-		List<Liste> listes = new ArrayList<Liste>();
-		
-		Liste liste;
-		
 		ResultSet rs = SQLRequestHandler.executeQuery("select * from Liste");
-		
+		return buildListFromResultSet(rs);
+	}
+
+	public void addListe(Liste liste) {
+		SQLRequestHandler.executeQuery("insert into Liste(intitule) values ('"+ liste.getIntitule() +"')");
+	}
+	
+	public List<Liste> buildListFromResultSet(ResultSet rs) {
+		List<Liste> listes = new ArrayList<Liste>();		
+		Liste liste;
 		try {
 			while(rs.next()) {
 				liste = new Liste();
@@ -40,13 +41,7 @@ public class ListeBean {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		};
-
-		
 		return listes;
-	}
-
-	public void addListe(Liste liste) {
-		SQLRequestHandler.executeQuery("insert into Liste(intitule) values ('"+ liste.getIntitule() +"')");
 	}
 
 }
