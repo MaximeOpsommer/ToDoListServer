@@ -1,4 +1,4 @@
-package car.tp4.bean;
+package bean;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,7 +10,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import car.tp4.entity.Liste;
+import entity.Liste;
 
 @Stateless
 @Local

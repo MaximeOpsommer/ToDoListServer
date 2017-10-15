@@ -1,4 +1,4 @@
-package car.tp4.servlet;
+package servlet;
 
 import java.io.IOException;
 
@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import car.tp4.bean.ItemBean;
-import car.tp4.entity.Item;
-import car.tp4.entity.Liste;
+import bean.ItemBean;
+import entity.Item;
+import entity.Liste;
 
 @WebServlet("/ajouterUnItem")
 public class AjouterUnItemServlet extends HttpServlet {

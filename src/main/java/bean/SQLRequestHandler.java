@@ -1,4 +1,4 @@
-package car.tp4.bean;
+package bean;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

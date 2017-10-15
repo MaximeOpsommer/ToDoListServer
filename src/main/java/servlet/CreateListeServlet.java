@@ -1,4 +1,4 @@
-package car.tp4.servlet;
+package servlet;
 
 import java.io.IOException;
 
@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import car.tp4.bean.ListeBean;
-import car.tp4.entity.Liste;
+import bean.ListeBean;
+import entity.Liste;
 
 @SuppressWarnings("serial")
 @WebServlet("/createListe")

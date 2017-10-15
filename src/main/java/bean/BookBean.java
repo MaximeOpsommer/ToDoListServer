@@ -1,4 +1,4 @@
-package car.tp4.bean;
+package bean;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import car.tp4.entity.Book;
+import entity.Book;
 
 import java.util.ArrayList;
 import java.util.List;

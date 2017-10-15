@@ -1,4 +1,4 @@
-package car.tp4.servlet;
+package servlet;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import car.tp4.bean.ListeBean;
+import bean.ListeBean;
 
 @WebServlet("/listes")
 public class ListeServlet extends HttpServlet {

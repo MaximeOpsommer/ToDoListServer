@@ -1,8 +1,4 @@
-package car.tp4.servlet;
-
-import car.tp4.bean.BookBean;
-import car.tp4.bean.PanierBean;
-import car.tp4.entity.Book;
+package servlet;
 
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
@@ -11,6 +7,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import bean.BookBean;
+import bean.PanierBean;
+import entity.Book;
+
 import java.io.IOException;
 
 /**

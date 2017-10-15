@@ -1,4 +1,4 @@
-package car.tp4.bean;
+package bean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import car.tp4.entity.Book;
+import entity.Book;
 
 /**
  * Classe bean permettant de gérer le panier de commande de livres

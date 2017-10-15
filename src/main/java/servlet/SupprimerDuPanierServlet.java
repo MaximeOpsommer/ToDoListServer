@@ -1,4 +1,4 @@
-package car.tp4.servlet;
+package servlet;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import car.tp4.bean.BookBean;
-import car.tp4.bean.PanierBean;
+import bean.BookBean;
+import bean.PanierBean;
 
 /**
  * Servlet permettant la suppression d'un livre du panier de commande

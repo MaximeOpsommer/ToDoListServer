@@ -1,12 +1,12 @@
-package car.tp4.test;
+package test;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import car.tp4.bean.ListeBean;
-import car.tp4.bean.SQLRequestHandler;
-import car.tp4.entity.Liste;
+import bean.ListeBean;
+import bean.SQLRequestHandler;
+import entity.Liste;
 
 public class ListeBeanTest {
 

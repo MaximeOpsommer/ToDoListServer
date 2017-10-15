@@ -3,7 +3,7 @@ package specs.liste;
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 
-import car.tp4.servlet.CreateListeServlet;
+import servlet.CreateListeServlet;
 
 @RunWith(ConcordionRunner.class)
 public class ListesFixture {

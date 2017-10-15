@@ -3,8 +3,8 @@ package specs.item;
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 
-import car.tp4.entity.Item;
-import car.tp4.servlet.AjouterUnItemServlet;
+import entity.Item;
+import servlet.AjouterUnItemServlet;
 
 @RunWith(ConcordionRunner.class)
 public class ItemsFixture {
