@@ -30,26 +30,29 @@
 </head>
 <body>
 	<h2>Existing ToDo lists</h2>
+	
+	<table id="table">
+		<tbody>
 
-	<%
-		Collection<Liste> listes = (Collection<Liste>) request.getAttribute("listes");
-		
-		for (Liste lst : listes) {
-			out.print("<br>");
-			out.print("<p>" + lst.getIntitule() + "</p>");
-		}
-	%>
+			<%
+			Collection<Liste> listes = (Collection<Liste>) request.getAttribute("listes");
+			
+			for (Liste liste : listes) {
+				out.print("<tr>");
+				out.print("<td>" + liste.getIntitule() + "</td>");
 
-	<br>
+				// bouton détail
+				out.print("<td><form method=\"GET\" action=\"/editListe\">");
+				out.print("<input hidden name=\"idListe\" value=\"" + liste.getId() + "\"></div>");
+				out.print("<input type=\"submit\" value=\"Detail\">");
+				out.print("</form></td>");
 
+				out.print("</tr>");
+			}
+			%>
+		</tbody>
 
-
-
-	<br>
-
-
-
-
+	</table>
 
 </body>
 </html>

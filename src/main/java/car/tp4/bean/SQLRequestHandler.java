@@ -21,13 +21,13 @@ public class SQLRequestHandler {
 		} catch (Exception e) {
 			// TODO: handle exception
 		} finally {
-	        try {
+	        /*try {
 	            if (conn != null) {
 	                conn.close();
 	            }
 	        } catch (SQLException ex) {
 	            System.out.println(ex.getMessage());
-	        }
+	        }*/
 	    }
 		
 		return rs;

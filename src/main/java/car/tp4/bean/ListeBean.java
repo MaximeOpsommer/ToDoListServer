@@ -23,6 +23,14 @@ public class ListeBean {
 		ResultSet rs = SQLRequestHandler.executeQuery("select * from Liste");
 		return buildListFromResultSet(rs);
 	}
+	
+	public Liste getListeById(long id) {
+		ResultSet rs = SQLRequestHandler.executeQuery("select * from Liste where id = " + id);
+		List<Liste> list = buildListFromResultSet(rs);
+		if(list.isEmpty())
+			return null;
+		return list.get(0);
+	}
 
 	public void addListe(Liste liste) {
 		SQLRequestHandler.executeQuery("insert into Liste(intitule) values ('"+ liste.getIntitule() +"')");

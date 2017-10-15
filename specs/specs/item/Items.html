@@ -1,0 +1,29 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+
+<head>
+
+<link href="../../concordion.css" rel="stylesheet" type="text/css" />
+
+<title>Items</title>
+
+</head>
+
+<body>
+
+<h1>Construction d'une item</h1>
+
+<p>
+	Construit un Item pour une liste a partir de la valeur remplie precedemment.
+	Par exemple, si on rentre la tache 
+	<span concordion:set="#realisee">non effectuee</span> 
+	<span concordion:set="#intitule">Acheter du pain</span> pour la 
+	<span concordion:set="#idListe">liste 'Faire les courses'</span>, on 
+	<span concordion:execute="#result = getTestBuildItem(#idListe, #intitule, #realisee)">envoie</span> en base de donnees l'objet Item ayant comme idListe 
+	<span concordion:assert-equals="#result.idListe">1</span>, comme intitule 
+	<span concordion:assert-equals="#result.intitule">'Acheter du pain'</span> et la valeur booleenne realisee 
+	<span concordion:assert-equals="#result.realisee">false</span>
+</p>
+
+</body>
+
+</html>

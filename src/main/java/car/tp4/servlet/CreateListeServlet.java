@@ -1,7 +1,6 @@
 package car.tp4.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
@@ -14,12 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import car.tp4.bean.ListeBean;
 import car.tp4.entity.Liste;
 
-/**
- * Servlet permettant la création d'un livre et son ajout dans la bibliotheque
- * 
- * @author Serial
- *
- */
+@SuppressWarnings("serial")
 @WebServlet("/createListe")
 public class CreateListeServlet extends HttpServlet {
 
@@ -43,6 +37,7 @@ public class CreateListeServlet extends HttpServlet {
 
 	    String intitule = request.getParameter("intitule");
 	    Liste liste = buildListe(intitule);
+	    
 	    listeBean.addListe(liste);
 	    response.sendRedirect("listes");
 	}

@@ -11,6 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import car.tp4.entity.Item;
+import car.tp4.entity.Liste;
 
 @Stateless
 @Local
@@ -27,6 +28,10 @@ public class ItemBean {
 	public List<Item> getItemsByListeId(int listeId) {
 		ResultSet rs = SQLRequestHandler.executeQuery("select * from Item where id_liste = " + listeId);
 		return buildListFromResultSet(rs);
+	}
+	
+	public void addItem(Item item) {
+		SQLRequestHandler.executeQuery("insert into Item(id_liste, intitule, realisee) values ('"+ item.getIdListe() +"', '" + item.getIntitule() + "', '" + item.isRealisee() + "')");
 	}
 	
 	public List<Item> buildListFromResultSet(ResultSet rs) {

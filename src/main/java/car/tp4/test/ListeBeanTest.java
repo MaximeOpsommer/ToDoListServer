@@ -1,10 +1,7 @@
 package car.tp4.test;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import car.tp4.bean.ListeBean;
@@ -30,5 +27,6 @@ public class ListeBeanTest {
 		Mockito.verify(handler).executeQuery(Mockito.anyString());
 		
 	}
+	
 
 }
